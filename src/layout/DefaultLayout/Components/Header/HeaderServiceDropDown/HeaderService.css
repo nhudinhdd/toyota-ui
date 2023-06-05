@@ -1,0 +1,40 @@
+.service-box {
+    display: flex;
+}
+.service-box-content {
+    margin-left: 120px;
+    margin-top: 53px;
+    text-align: left;
+    display: flex;
+    column-gap: 100px;
+    flex-wrap: wrap;
+}
+.service-box-content-container h2 {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.service-box-content-container li {
+    display: block;
+    font-weight: 500;
+}
+
+.service-box-content-container ul {
+    padding: 0;
+}
+
+.service-box-content-container li {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.service-box-content-container li:hover {
+    color: red;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+
