@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1023px) {
+    #bottom_header__Mobile {
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #bottom_header__Mobile {
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+@media only screen and (min-width: 1024px) {
+    .input-search {
+        display: inline-block;
+    }
+
+    .hotline a {
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 7px;
+
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .input-search {
+        display: none;
+    }
+
+    .hotline a {
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+}
+
+#top_header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.input-search {
+    box-shadow: none;
+    font-size: 13px;
+    padding: 3px 7px;
+    color: #999;
+    border: none;
+    background: no-repeat;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-bottom: 0.5px solid #ccc;
+}
