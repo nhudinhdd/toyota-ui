@@ -237,5 +237,4 @@ export const getVehicles = (type, from, to) => {
 
 export const getVehicleTypes = () => {
     return vehiclesTypeData;
-
 }

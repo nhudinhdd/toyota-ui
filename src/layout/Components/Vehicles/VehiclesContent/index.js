@@ -1,8 +1,8 @@
 import './Vehicles.css'
-import * as vehicleService from '../../../../service/vehicles'
-import { useState } from 'react'
 
 function VehiclesContent({ vehicles }) {
+    console.log("Vehicles Contetnt");
+
     return (<div className="vehicles-content-list-contain">
         <div className="vehicles-show-conntanin">
             <div className="list-car">

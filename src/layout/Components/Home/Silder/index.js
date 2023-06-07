@@ -3,7 +3,7 @@ import silder2 from "../../../../assets/img/slider/silder2.jpg"
 import silder3 from "../../../../assets/img/slider/silder3.png"
 import silder4 from "../../../../assets/img/slider/silder4.jpg"
 import silder5 from "../../../../assets/img/slider/sidler5.jpeg"
-
+import './Silder.css'
 import { useState} from 'react';
 
 function Silder() {

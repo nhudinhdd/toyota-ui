@@ -11,13 +11,6 @@ import HeaderServiceDropDown from "../Header/HeaderServiceDropDown/index"
 import { useState } from 'react'
 function Header() {
     const [isShowMenu, setShowMenu] = useState({ product: false, tech: false, service: false, news: false, electro: false, info: false })
-
-    window.addEventListener('click', function (e) {
-        if (document.getElementById('container-header').contains(e.target)) {
-        } else {
-            setShowMenu({ product: false, tech: false, service: false, news: false, electro: false, info: false })
-        }
-    });
     const showDropDown = function (id) {
         switch (id) {
             case 'product':

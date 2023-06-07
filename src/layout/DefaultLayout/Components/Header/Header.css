@@ -140,20 +140,6 @@
     padding-left: 7px;
 }
 
-.silder1 {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    max-width: 1600px;
-    /* height: 640px; */
-    max-height: 680px;
-    touch-action: pan-y;
-}
-
 #previous {
     position: absolute;
     top: 50%;

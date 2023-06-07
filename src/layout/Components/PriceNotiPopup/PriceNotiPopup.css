@@ -1,0 +1,87 @@
+.price-noti-popup {
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    max-width: 1000px;
+    cursor: pointer;
+    top: 50%;
+    padding: 24px 60px 24px 90px;
+    border: 1px solid #808080;
+    z-index: 1000;
+
+}
+
+.title-form-info {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+
+.price-noti-popup-header {
+    border-bottom: 2px solid #EB0A1E;
+}
+
+.price-noti-popup-header p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    color: #EB0A1E;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+
+.form-info-detail {
+    margin-top: 20px;
+    text-align: start;
+}
+
+.info-detail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-price-noti {
+    width: 100%;
+    padding-bottom: 8px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cccccc;
+}
+.price-noti-button {
+    margin-top: 30px;
+}
+
+.price-noti-button input {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #808080;
+    background-color: #ffffff;
+}
+
+.info-detail >select {
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+
+.close-popup-price-noti {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 20px;
+}

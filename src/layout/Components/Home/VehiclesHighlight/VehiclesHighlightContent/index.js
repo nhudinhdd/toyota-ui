@@ -5,6 +5,7 @@ import { useState } from 'react'
 function VehiclesHighlightContent () {
     const vehicleTypeList = homeService.getVehicleTypes();
     const [vehicleTypes, setVehicleTypes] = useState(vehicleTypeList);
+    console.log("aaaaaaaaaaa");
     const [vehicleTypeActive, setVehicleTypeActive] = useState(vehicleTypeList[0].id);
     const [vehicles, setVehicles] = useState(homeService.getVehicles(vehicleTypeActive, 0, 4));
     const [from, setFrom] = useState(0);
@@ -12,13 +13,13 @@ function VehiclesHighlightContent () {
     const maxLength = homeService.getMaxLength(vehicleTypeActive);
 
     const changeCarType = function (id) {
+        console.log(id);
         setVehicleTypeActive(id)
         setVehicles(homeService.getVehicles(id, 0, 4))
     }
 
     const nextVehicle = function () {
         if (to < maxLength) {
-            console.log(maxLength);
             setFrom(from + 1)
             setTo(to + 1)
             setVehicles(homeService.getVehicles(vehicleTypeActive, from + 1, to + 1))
