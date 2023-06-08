@@ -10,9 +10,9 @@ function Home() {
     return (
         <div className="home-container">
             <Silder></Silder>
-
+            <div className='section-home'>
             <Vehicles></Vehicles>
-            {/* <div id="section">
+            <div id="section">
                 <div className="section-container">
                     <h2 className="section-title">TIN TỨC &amp; KHUYẾN MÃI</h2>
                     <div className="section-tab">
@@ -92,7 +92,9 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
+            </div>
+           
         </div>
 
     )

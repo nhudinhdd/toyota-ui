@@ -56,19 +56,18 @@
 }
 
 
-.nav {
+#header .nav {
     height: 100%;
 }
 
-.nav li {
+#header .nav li {
     display: inline-block;
 }
 
-.nav>li {
+#header .nav>li {
     color: #333;
-    font-size: 13px;
+    font-size: 16px;
     text-decoration: none;
-    text-transform: uppercase;
     padding-top: 10px;
 }
 
@@ -137,20 +136,6 @@
     background-color: #EB0A1E;
 }
 
-#section-discovery-vehicles {
-    padding-top: 120px;
-    padding-bottom: 60px;
-}
-
-#discovery-vehicles-container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-tab .nav {
-    border-bottom: 1.5px black solid;
-}
-
 .discovery-vehicles-title {
     font-weight: bold;
     font-size: 38px;
@@ -163,34 +148,9 @@
     border-bottom: 4px solid #EB0A1E;
 }
 
-.section-item {
-    padding-bottom: 10px;
-    width: 200px;
-    cursor: pointer;
-}
-
 .car-model {
     font-size: 18px;
     text-align: center;
-}
-
-.vehicles-content-list {
-    display: flex;
-    margin-top: 56px;
-}
-
-.vehicles-content {
-    width: 300px;
-    height: 100%;
-
-}
-
-.vehicles-item {
-    padding: 0 28px;
-}
-
-.vehicles-item a {
-    text-decoration: none;
 }
 
 .top-content {
@@ -261,101 +221,4 @@
 
 .note-car span:last-child {
     border: none;
-}
-
-#section {
-    padding-top: 120px;
-    padding-bottom: 60px;
-}
-
-.section-container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-tab>ul {
-    display: flex;
-}
-
-.section-tab>ul>li {
-    flex: 1;
-}
-
-.section-new-post {
-    display: flex;
-    padding-top: 60px;
-    column-gap: 24px;
-}
-
-.section-new-post-large a {
-    text-decoration: none;
-}
-
-
-
-.section-new-post-large-title {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    color: #101010;
-    margin-bottom: 12px;
-}
-
-.section-new-post-large-content-detail {
-    font-size: 14px;
-    line-height: 150%;
-    color: #101010;
-    margin-bottom: 0;
-}
-
-.section-new-post-large {
-    width: 829px;
-}
-
-.section-new-post-small {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-}
-
-.section-new-post-small-container {
-    text-decoration: none;
-    width: 100%;
-}
-
-.section-new-post-small-container>img {
-    width: 100%;
-    height: 100%;
-    max-height: 173px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.section-new-post-small-title {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    color: #101010;
-    margin-bottom: 8px;
-}
-
-.section-new-post-small-detail {
-    font-size: 14px;
-    line-height: 150%;
-    color: #101010;
-    margin-bottom: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-}
-
-
-
-.section-title {
-    font-weight: bold;
-    font-size: 35px;
-    line-height: 50px;
-    color: #101010;
-    margin-bottom: 60px;
 }

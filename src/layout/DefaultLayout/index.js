@@ -11,7 +11,7 @@ function DefaultLayout({ children }) {
             <div className="">
                 <div className="content">{children}</div>
             </div>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
             <PhoneCall></PhoneCall>
             <CarPrice></CarPrice>
             {/* <PriceNotiPopup></PriceNotiPopup> */}

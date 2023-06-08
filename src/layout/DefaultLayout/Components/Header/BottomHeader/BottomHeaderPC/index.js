@@ -56,9 +56,9 @@ function BottomHeaderPC() {
             <div id="bottom_header">
                 <ul className="nav">
                     {menus.map((menu) => (
-                        <li className={`nav-container ${activeID === menu.id ? 'active-dropdown' : ''}`} id={menu.id} onClick={() => showDropDown(`${menu.id}`)}>
+                        <li className={`nav-container ${activeID === menu.id ? 'active-dropdown' : ''}`} id={menu.id} onClick={() => showDropDown(`${menu.id}`)} key={menu.id}>
                             <a href="#">
-                                {menu.title}
+                                {menu.name}
                                 <i className="fa-sharp fa-solid fa-caret-down fa-sm" style={{ color: "#000000" }}></i>
                             </a>
                         </li>

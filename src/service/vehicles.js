@@ -1,22 +1,22 @@
 const vehiclesTypeData = [
     {
-        id: 'vehicle-0001',
+        id: 'Sedan',
         name: 'Sedan'
     },
     {
-        id: 'vehicle-0002',
+        id: 'Hatchback',
         name: 'Hatchback'
     },
     {
-        id: 'vehicle-0003',
+        id: 'SUV',
         name: 'SUV'
     },
     {
-        id: 'vehicle-0004',
+        id: 'Đa dụng',
         name: 'Đa dụng'
     },
     {
-        id: 'vehicle-0005',
+        id: 'Bán tải',
         name: 'Bán tải'
     },
 ]

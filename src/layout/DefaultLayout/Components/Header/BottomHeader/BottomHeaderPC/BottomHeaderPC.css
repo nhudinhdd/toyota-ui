@@ -2,6 +2,12 @@
     #bottom_header {
         display: block;
     }
+
+    .sub-nav-contaier-content{
+        max-width: 1200px;
+        margin: auto;
+    }
+    
 }
 
 @media only  screen and  (max-width: 1023px){
@@ -45,11 +51,6 @@
 }
 .sub-nav-container-tech {
     padding-bottom: 0px;
-}
-
-.sub-nav-contaier-content{
-    max-width: 1200px;
-    margin: auto;
 }
 
 .nav li a {

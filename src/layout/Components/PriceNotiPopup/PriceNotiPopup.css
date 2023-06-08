@@ -1,3 +1,14 @@
+@media screen and (max-width: 1023px) {
+    .price-noti-popup {
+        padding: 8px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .price-noti-popup {
+        padding: 24px 60px 24px 90px;
+    }
+}
 .price-noti-popup {
     position: fixed;
     left: 50%;
@@ -8,7 +19,6 @@
     max-width: 1000px;
     cursor: pointer;
     top: 50%;
-    padding: 24px 60px 24px 90px;
     border: 1px solid #808080;
     z-index: 1000;
 

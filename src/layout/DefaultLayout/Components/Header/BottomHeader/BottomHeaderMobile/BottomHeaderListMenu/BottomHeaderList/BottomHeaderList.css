@@ -1,0 +1,66 @@
+@media only screen and (max-width: 1023px) {
+
+    .mobile-menu-box {
+        position: fixed;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+    }
+
+    .mobile-menu-container {
+        margin: 0 24px;
+    }
+
+    .mobile-menu-box li {
+        list-style-type: none;
+        text-align: start;
+        padding: 18px 12px;
+        border-bottom: 0.5px solid #CCCCCC;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.025em;
+        color: #000000;
+    }
+
+    .menu-title{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-menu-detail {
+        top: 0;
+        bottom: 0;
+        overflow: auto !important;
+    }
+    
+    .mobile-menu-header {
+        border-bottom: 1px solid #EB0A1E;
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-menu-header p {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 26px;
+        letter-spacing: 0.025em;
+        color: #000000;
+    }
+    
+    .mobile-menu-header-display{
+        display: none;
+    }
+
+    .car-tech {
+        display:  block;
+    }
+
+    .car-content {
+        height: auto;
+        margin-bottom: 3px;
+    }
+}
