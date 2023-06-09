@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom'
 import { useState } from 'react'
 function Vehicles() {
     const { state } = useLocation();
-    const { vehicleTypeActive } = state;
+    const { vehicleTypeActive = 'all' } = state;
     const [vehicles, setVehicles] = useState(vehicleService.getVehicles(vehicleTypeActive, 'all', 'all', 'all'))
     const [filterData, setFilterData] = useState({ style: 'all', price: 'all', category: 'all', order: 'all' })
     const callBack = ({ style = 'all', price = 'all', category = 'all', order = 'all' }) => {
