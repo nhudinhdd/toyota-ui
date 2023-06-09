@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom'
 
 import { useEffect, useState } from 'react'
 function Vehicles() {
+    console.log("dddddddddddd");
     const { state } = useLocation();
     const { vehicleTypeActive } = state || 'all';
     const [vehicles, setVehicles] = useState(vehicleService.getVehicles(vehicleTypeActive, 'all', 'all', 'all'))

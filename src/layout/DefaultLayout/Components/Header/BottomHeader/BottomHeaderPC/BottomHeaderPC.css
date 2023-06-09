@@ -21,6 +21,10 @@
     height: 45px;
 }
 
+#bottom_header a {
+    cursor: pointer;
+}
+
 .nav .sub-nav {
     position: absolute;
     display: none;

@@ -52,6 +52,7 @@ function VehiclesHighlightContent({ inActiveDropDown }) {
 
     const toVehicles = (idActive) => {
         inActiveDropDown();
+        console.log("dsadasd");
         let vehiclesType = idActive !== 'all' ? vehicleTypeList.find(v => { return v.id === idActive }).name : 'all';
         console.log(vehiclesType);
         navigate('/vehicles', { state: { vehicleTypeActive: vehiclesType } })

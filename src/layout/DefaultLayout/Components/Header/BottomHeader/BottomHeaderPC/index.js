@@ -19,6 +19,7 @@ function BottomHeaderPC() {
         isActiveNow ? setActiveID('') : setActiveID(id)
         switch (id) {
             case 'product':
+                console.log("xcxcc");
                 setDropDownMenu(isActiveNow ? defaultCpn : () => {
                     return <VehiclesHighlightContent inActiveDropDown={inActiveDropDown}></VehiclesHighlightContent>
                 })
@@ -63,7 +64,7 @@ function BottomHeaderPC() {
                 <ul className="nav">
                     {menus.map((menu) => (
                         <li className={`nav-container ${activeID === menu.id ? 'active-dropdown' : ''}`} id={menu.id} onClick={() => showDropDown(`${menu.id}`)} key={menu.id}>
-                            <a href="#">
+                            <a>
                                 {menu.name}
                                 <i className="fa-sharp fa-solid fa-caret-down fa-sm" style={{ color: "#000000" }}></i>
                             </a>
