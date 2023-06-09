@@ -1,7 +1,6 @@
 import './VehiclesFilter.css'
 import * as vehiclesService from '../../../../service/vehicles'
-function VehiclesFilter({ callBack, filterData }) {
-    console.log("filter");
+function VehiclesFilter({ callBack, filterData, vehicleTypeActive }) {
     const carStyles = vehiclesService.getVehicleTypes();
     const carCategory = vehiclesService.getVehicleCategory();
     const onChangeStyle = (e) => {
@@ -24,15 +23,14 @@ function VehiclesFilter({ callBack, filterData }) {
         filterData['order'] = e.target.value;
         callBack(filterData);
     }
-
     return (
         <div className='filter-group-list'>
             <div className='filer-group'>
                 <label htmlFor="car-style" className='car-filter-style'>Kiểu dáng</label>
-                <select id='car-style' onChange={onChangeStyle} className='select-input'>
-                    <option defaultValue value='all'>Chọn</option>
+                <select id='car-style' onChange={onChangeStyle} className='select-input' defaultValue={vehicleTypeActive}>
+                    <option  value='all'>Chọn</option>
                     {carStyles.map((style) => (
-                        <option key={style.name} value={style.name}>{style.name}</option>
+                        <option key={style.name} value={style.name}>{style.name} </option>
                     ))}
                 </select>
             </div>

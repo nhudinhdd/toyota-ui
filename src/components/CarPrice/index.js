@@ -12,7 +12,7 @@ function CarPrice() {
     return (
     <div className='car-price-noti'>
         <div className="car-container" onClick={onClickCarPice}>
-        <FontAwesomeIcon icon={faMoneyCheckDollar} className='fa-2x ' style={{color: "#FFF"}}/>
+        <FontAwesomeIcon icon={faMoneyCheckDollar} className='fa-2x' style={{color: "#FFF"}}/>
         </div>
         {isShowPopup && <PriceNotiPopup onClickCarPice={onClickCarPice}></PriceNotiPopup>}
 

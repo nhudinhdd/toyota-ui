@@ -2,8 +2,9 @@ import './VehiclesHighlightContent.css'
 import * as homeService from '../../../../../service/homeSerivce'
 import { useState, useEffect } from 'react'
 import useViewport from '../../../../../components/ViewPort/index'
+import { useNavigate } from 'react-router-dom';
+
 function VehiclesHighlightContent() {
-    // const mediaQuery = window.matchMedia('(min-width: 1024px)')
     const vehicleTypeList = homeService.getVehicleTypes();
     const [vehicleTypes, setVehicleTypes] = useState(vehicleTypeList);
     const [vehicleTypeActive, setVehicleTypeActive] = useState(vehicleTypeList[0].id);
@@ -13,9 +14,10 @@ function VehiclesHighlightContent() {
     const [vehicles, setVehicles] = useState(homeService.getVehicles(vehicleTypeActive, 0, maxLengthVehicle));
     const [from, setFrom] = useState(0);
     const maxLength = homeService.getMaxLength(vehicleTypeActive);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        if (isPC){
+        if (isPC) {
             setVehicles(homeService.getVehicles(vehicleTypeActive, 0, 4))
             setMaxLengthVehicle(4);
             setTo(4)
@@ -49,12 +51,20 @@ function VehiclesHighlightContent() {
         }
     }
 
+    const toVehicles = (idActive) => {
+        console.log(vehicleTypeActive);
+        console.log(vehicleTypeList);
+        console.log(idActive);
+        let vehiclesType = idActive !== 'all'? vehicleTypeList.find(v => { return v.id === idActive }).name: 'all';
+        navigate('/vehicles', { state: { vehicleTypeActive: vehiclesType } })
+    }
+
 
     return (
         <div className='sub-nav-contaier-content'>
             <div className="section-tab">
                 <ul className="nav">
-                    <li className='section-item'><a href='vehicles' className='car-model'><p>Tất cả</p></a></li>
+                    <li className='section-item'><a onClick={() => toVehicles('all')} className='car-model'><p>Tất cả</p></a></li>
                     {vehicleTypes.map((vehicleType) => (
                         <li key={vehicleType.id} className={`section-item ${vehicleTypeActive === vehicleType.id ? 'active' : ''}`} id={vehicleType.id} onClick={() => changeCarType(vehicleType.id)}>
                             <p className="car-model">{vehicleType.name}</p>
@@ -67,7 +77,7 @@ function VehiclesHighlightContent() {
                     {vehicles.map((vehicle) => (
                         <div key={vehicle.carName} className="vehicles-content">
                             <div className="vehicles-item">
-                                <a href='/vehicles'>
+                                <a onClick={() => toVehicles(vehicleTypeActive)}>
                                     <div className="top-content">
                                         <span>{vehicle.engVer}</span>
                                         <span>{vehicle.engNumber}</span>

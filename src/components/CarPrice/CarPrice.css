@@ -1,7 +1,21 @@
+@media screen and (max-width: 1023px) {
+    .car-price-noti {
+        left: 30px;
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .car-price-noti {
+        left: 40px;
+
+    }
+}
+
+
 .car-price-noti {
     position: fixed;
     bottom: 0;
-    left: 40px;
     width: 110px;
     height: 110px;
     cursor: pointer;

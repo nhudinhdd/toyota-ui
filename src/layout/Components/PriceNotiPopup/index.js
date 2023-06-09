@@ -59,7 +59,7 @@ function PriceNotiPopup({onClickCarPice}) {
                         <div className='info-detail'>
                             <label className='title-form-info'>Xe bạn cần báo giá *</label>
                             <select onChange={onChangeCar}>
-                                {vehiclesSerice.getVehicles('all', 'all', 'all', 'all').map((vehicle) => (<option value={vehicle.carName}>{vehicle.carName}</option>))}
+                                {vehiclesSerice.getVehicles('all', 'all', 'all', 'all').map((vehicle) => (<option value={vehicle.carName} key={vehicle.carName}>{vehicle.carName}</option>))}
                             </select>
                         </div>
                         <div className='info-detail'>

@@ -1,8 +1,6 @@
 import './Vehicles.css'
 
 function VehiclesContent({ vehicles }) {
-    console.log("Vehicles Contetnt");
-
     return (<div className="vehicles-content-list-contain">
         <div className="vehicles-show-conntanin">
             <div className="list-car">

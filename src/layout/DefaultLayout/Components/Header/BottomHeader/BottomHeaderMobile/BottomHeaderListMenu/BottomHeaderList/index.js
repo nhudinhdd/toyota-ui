@@ -83,8 +83,8 @@ function BottomHeaderList({ showView }) {
     }
 
     
-    function changeLocation(){
-        navigate("/vehicles");
+    function changeLocation(vehicleType){
+        navigate("/vehicles", {state: {vehicleTypeActive: vehicleType}});
         window.location.reload();
     }
 
@@ -103,7 +103,7 @@ function BottomHeaderList({ showView }) {
             {!isShowHeaderImg && <div className='mobile-menu-container'>
                 <ul>
                     {menus.map((menu) => (
-                        <li className='menu-title' id={menu.id} onClick={vehilceTypes.some(v=> v.id === menu.id) ? () => changeLocation() : () => updateListMenu(menu.id, menu.name)} key={menu.id}>
+                        <li className='menu-title' id={menu.id} onClick={vehilceTypes.some(v=> v.id === menu.id) ? () => changeLocation(menu.name) : () => updateListMenu(menu.id, menu.name)} key={menu.id}>
                             <span >{menu.name}</span>
 
                             <FontAwesomeIcon icon={faChevronRight} style={{ color: "#d71921", }} />

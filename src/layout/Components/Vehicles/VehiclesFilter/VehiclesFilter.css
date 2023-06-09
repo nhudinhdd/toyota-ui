@@ -1,3 +1,10 @@
+@media screen and (max-width: 1023px) {
+    .filter-group-list {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
 .filter-group-list{
     display: flex;
     column-gap: 20px;

@@ -19,9 +19,10 @@
     .footer-menu-title {
         margin-bottom: 24px;
     }
+
     .footer-item {
-        padding-bottom: 20px;
-        margin-left: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
 }
@@ -29,6 +30,7 @@
 .box-footer-container {
     background-color: #101010;
 }
+
 .footer-menu-title {
     font-size: 18px;
     font-weight: 600px;
@@ -36,6 +38,7 @@
     letter-spacing: 0.025em;
     color: #FFFFFF;
 }
+
 .footer-container {
     max-width: 1200px;
     margin: auto;
