@@ -20,7 +20,7 @@ function BottomHeaderPC() {
         switch (id) {
             case 'product':
                 setDropDownMenu(isActiveNow ? defaultCpn : () => {
-                    return <VehiclesHighlightContent></VehiclesHighlightContent>
+                    return <VehiclesHighlightContent inActiveDropDown={inActiveDropDown}></VehiclesHighlightContent>
                 })
                 break;
             case 'tech':
@@ -51,6 +51,12 @@ function BottomHeaderPC() {
 
         }
     }
+
+    const inActiveDropDown = ()=>{
+        setDropDownMenu(<></>)
+        setActiveID('')
+    }
+
     return (
         <div>
             <div id="bottom_header">

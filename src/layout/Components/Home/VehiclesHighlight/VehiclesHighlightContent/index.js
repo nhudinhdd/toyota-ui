@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import useViewport from '../../../../../components/ViewPort/index'
 import { useNavigate } from 'react-router-dom';
 
-function VehiclesHighlightContent() {
+function VehiclesHighlightContent({ inActiveDropDown }) {
     const vehicleTypeList = homeService.getVehicleTypes();
     const [vehicleTypes, setVehicleTypes] = useState(vehicleTypeList);
     const [vehicleTypeActive, setVehicleTypeActive] = useState(vehicleTypeList[0].id);
@@ -30,7 +30,6 @@ function VehiclesHighlightContent() {
     }, [isPC])
 
     const changeCarType = function (id) {
-        console.log(id);
         setVehicleTypeActive(id)
         setVehicles(homeService.getVehicles(id, 0, maxLengthVehicle))
     }
@@ -52,10 +51,9 @@ function VehiclesHighlightContent() {
     }
 
     const toVehicles = (idActive) => {
-        console.log(vehicleTypeActive);
-        console.log(vehicleTypeList);
-        console.log(idActive);
-        let vehiclesType = idActive !== 'all'? vehicleTypeList.find(v => { return v.id === idActive }).name: 'all';
+        inActiveDropDown();
+        let vehiclesType = idActive !== 'all' ? vehicleTypeList.find(v => { return v.id === idActive }).name : 'all';
+        console.log(vehiclesType);
         navigate('/vehicles', { state: { vehicleTypeActive: vehiclesType } })
     }
 
@@ -110,10 +108,6 @@ function VehiclesHighlightContent() {
                     <i className="fa-solid fa-chevron-right" style={{ color: '#aea7a7' }}></i>
                 </div>
             </div>
-
-
-
-
         </div>
     )
 }

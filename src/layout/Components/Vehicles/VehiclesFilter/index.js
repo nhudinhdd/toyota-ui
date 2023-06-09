@@ -27,7 +27,7 @@ function VehiclesFilter({ callBack, filterData, vehicleTypeActive }) {
         <div className='filter-group-list'>
             <div className='filer-group'>
                 <label htmlFor="car-style" className='car-filter-style'>Kiểu dáng</label>
-                <select id='car-style' onChange={onChangeStyle} className='select-input' defaultValue={vehicleTypeActive}>
+                <select id='car-style' onChange={onChangeStyle} className='select-input' key={filterData['style']} defaultValue={filterData['style']}>
                     <option  value='all'>Chọn</option>
                     {carStyles.map((style) => (
                         <option key={style.name} value={style.name}>{style.name} </option>
