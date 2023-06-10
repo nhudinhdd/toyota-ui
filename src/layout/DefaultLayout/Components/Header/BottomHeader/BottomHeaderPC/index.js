@@ -14,18 +14,22 @@ function BottomHeaderPC() {
     const [DropDownMenu, setDropDownMenu] = useState(defaultCpn);
     const menus = headerService.getHeaderTitles()
     const [activeID, setActiveID] = useState('');
+    const inActiveDropDown = () => {
+        setDropDownMenu(<></>)
+        setActiveID('')
+    }
+
     const showDropDown = function (id) {
-        const isActiveNow = activeID === id ;
+        const isActiveNow = activeID === id;
         isActiveNow ? setActiveID('') : setActiveID(id)
         switch (id) {
             case 'product':
-                console.log("xcxcc");
                 setDropDownMenu(isActiveNow ? defaultCpn : () => {
                     return <VehiclesHighlightContent inActiveDropDown={inActiveDropDown}></VehiclesHighlightContent>
                 })
                 break;
             case 'tech':
-                setDropDownMenu(isActiveNow? defaultCpn : () => {
+                setDropDownMenu(isActiveNow ? defaultCpn : () => {
                     return <HeaderTech></HeaderTech>
                 })
                 break;
@@ -35,7 +39,7 @@ function BottomHeaderPC() {
                 })
                 break;
             case 'news':
-                setDropDownMenu(isActiveNow? defaultCpn : () => {
+                setDropDownMenu(isActiveNow ? defaultCpn : () => {
                     return <HeaderNewDropDown></HeaderNewDropDown>
                 })
                 break;
@@ -53,10 +57,7 @@ function BottomHeaderPC() {
         }
     }
 
-    const inActiveDropDown = ()=>{
-        setDropDownMenu(<></>)
-        setActiveID('')
-    }
+
 
     return (
         <div>
