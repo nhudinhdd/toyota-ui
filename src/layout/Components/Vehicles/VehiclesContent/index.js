@@ -9,7 +9,7 @@ function VehiclesContent({ vehicles }) {
                         <div key={vehicle.carName} className="col-12 col-md-6 col-lg-4 vehicle-item">
                             <div className="box-vehicle-item">
                                 <div className="box-vehicle-image">
-                                    <a href="/alphard-luxury">
+                                    <div href="#">
                                         <img className="lazy"
                                             data-src={vehicle.carImg}
                                             src={vehicle.carImg}
@@ -19,11 +19,11 @@ function VehiclesContent({ vehicles }) {
                                             data-src={vehicle.carImgHover}
                                             src={vehicle.carImgHover}
                                             alt={vehicle.carName} />
-                                    </a>
+                                    </div>
 
                                 </div>
                                 <div className="box-vehicle-item-content">
-                                    <a href="/alphard-luxury">
+                                    <div href="#">
                                         <h2 className="car-name">
                                             {vehicle.carName}
                                         </h2>
@@ -55,13 +55,13 @@ function VehiclesContent({ vehicles }) {
                                                     style={{ color: '#000000' }}></i>{vehicle.carEngDes}</p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                     <div className="content-product-compare">
                                         <div className="cost-est">
-                                            <a href="/du-toan-chi-phi">DỰ TOÁN</a>
+                                            <a>DỰ TOÁN</a>
                                         </div>
                                         <div className="compare">
-                                            <a href="/so-sanh"><span>SO SÁNH</span></a>
+                                            <a><span>SO SÁNH</span></a>
                                         </div>
                                     </div>
                                 </div>

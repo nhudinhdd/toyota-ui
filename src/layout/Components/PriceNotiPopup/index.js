@@ -6,21 +6,40 @@ import * as vehiclesSerice from '../../../service/vehicles'
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
 
-function PriceNotiPopup({onClickCarPice}) {
+function PriceNotiPopup({ onClickCarPice }) {
 
     const [carName, setCarName] = useState(vehiclesSerice.getVehicles('all', 'all', 'all', 'all')[0].carName);
     const [time, setTime] = useState('Tháng này');
     const [area, setArea] = useState(priceNotiService.getArea()[0])
     const [isShowPricePopup, setShowPricePopup] = useState(true);
+    const [isShowErrorName, setShowErrorName] = useState(false);
+    const [isShowErrorPhone, setShowErrorPhone] = useState(false);
+    const validateInput = () => {
+        let isValid = true;
+        const formValidate = document.forms["contact-form"];
+        let name = formValidate["customer-name"].value;
+        let phoneNumber = formValidate["phone-number"].value;
+        if (name === '' || name === undefined) {
+            setShowErrorName(true);
+            isValid = false
+        }
+        if (phoneNumber === '' || phoneNumber === undefined) {
+            setShowErrorPhone(true);
+            isValid = false
+        }
+        return isValid;
+    }
+
     function sendEmail(e) {
         e.preventDefault();
-
-        emailjs.sendForm('service_0rao4jo', 'template_dfzwv7q', e.target, 'eZatyaZvCIRK71Dv0')
-            .then((result) => {
-                window.location.reload()
-            }, (error) => {
-                console.log(error.text);
-            });
+        if (validateInput()) {
+            emailjs.sendForm('service_0rao4jo', 'template_dfzwv7q', e.target, 'eZatyaZvCIRK71Dv0')
+                .then((result) => {
+                    window.location.reload()
+                }, (error) => {
+                    console.log(error.text);
+                });
+        }
     }
 
     const onChangeCar = (e) => {
@@ -34,25 +53,35 @@ function PriceNotiPopup({onClickCarPice}) {
     const onChangeArea = (e) => {
         setArea(e.target.value)
     }
+
+    const onChange = (e) => {
+        let clName = e.target.name;
+        if (clName === 'customer-name') { setShowErrorName(false) }
+        if (clName === 'phone-number') { setShowErrorPhone(false) }
+
+    }
     const Result =
         <div className="price-noti-popup">
             <div className="price-noti-popup-header">
                 <p>NHẬN BÁO GIÁ SAU 2 PHÚT</p>
             </div>
-            <form className="contact-form" onSubmit={sendEmail}>
+            <form className="contact-form" onSubmit={sendEmail} name='contact-form'>
                 <div className='form-info'>
                     <div className='form-info-detail'>
                         <div className='info-detail'>
                             <label className='title-form-info'>Họ và tên *</label>
-                            <input placeholder='Nguyễn Văn A' className='input-price-noti' name='customer-name'></input>
+
+                            <input placeholder='Nguyễn Văn A' className={`input-price-noti ${isShowErrorName ? 'invalid-input' : ''}`} name='customer-name' onChange={onChange}></input>
+                            {isShowErrorName && <small className='errorInput'>Vui lòng nhập họ tên</small>}
                         </div>
                         <div className='info-list'>
                             <div className='info-detail'>
                                 <label className='title-form-info'>Số điện thoại *</label>
-                                <input placeholder='0987930704' className='input-price-noti' name='phone-number'></input>
+                                <input placeholder='0987930704' className={`input-price-noti ${isShowErrorPhone ? 'invalid-input' : ''}`} name='phone-number'  onChange={onChange}></input>
+                                {isShowErrorPhone && <small className='errorInput'>Vui lòng nhập số điện thoại</small>}
                             </div>
                             <div className='info-detail'>
-                                <label className='title-form-info'>Email *</label>
+                                <label className='title-form-info'>Email</label>
                                 <input placeholder='toyota@gmail.com' className='input-price-noti' name='email'></input>
                             </div>
                         </div>
@@ -93,10 +122,10 @@ function PriceNotiPopup({onClickCarPice}) {
             </form>
 
         </div>
-    
+
     return (
         <>
-            { isShowPricePopup && Result}
+            {isShowPricePopup && Result}
 
         </>
     )

@@ -2,12 +2,29 @@
     .price-noti-popup {
         padding: 8px;
     }
+
+    .info-list {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .price-noti-popup {
         padding: 24px 60px 24px 90px;
     }
+
+    .info-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.errorInput {
+    color: #EB0A1E;
+}
+
+.invalid-input {
+    border-bottom: 1px solid red!important
 }
 .price-noti-popup {
     position: fixed;
@@ -58,12 +75,6 @@
     margin-top: 20px;
 }
 
-.info-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .input-price-noti {
     width: 100%;
     padding-bottom: 8px;
@@ -71,6 +82,7 @@
     outline: none;
     border-bottom: 1px solid #cccccc;
 }
+
 .price-noti-button {
     margin-top: 30px;
 }
@@ -80,9 +92,10 @@
     height: 40px;
     border: 1px solid #808080;
     background-color: #ffffff;
+    color: #1a1a1a;
 }
 
-.info-detail >select {
+.info-detail>select {
     border: none;
     border-bottom: 1px solid #cccccc;
     padding-bottom: 10px;

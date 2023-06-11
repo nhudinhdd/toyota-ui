@@ -140,9 +140,7 @@
     color: #000000;
 }
 
-.box-vehicle-item-content a {
-    text-decoration: none;
-}
+
 
 .item-description {
     margin-left: 15px;
@@ -251,18 +249,18 @@
     position: absolute;
 }
 
-.box-vehicle-image a {
+.box-vehicle-image div {
     display: flex;
     justify-content: center;
 }
 
-.box-vehicle-image a:hover :nth-child(1) {
+.box-vehicle-image div:hover :nth-child(1) {
     visibility: hidden;
     opacity: 1;
     position: absolute;
 }
 
-.box-vehicle-image a:hover :nth-child(2) {
+.box-vehicle-image div:hover :nth-child(2) {
     visibility: visible;
     opacity: 1;
     position: absolute;

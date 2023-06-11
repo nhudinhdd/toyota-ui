@@ -33,8 +33,7 @@ function Home() {
                     </div>
                     <div className="section-new-post">
                         <div className="section-new-post-large">
-                            <a className="section-new-post-large-container"
-                                href="/tin-tuc/san-pham/toyota-wigo-hoan-toan-moi-sap-ra-mat-tai-viet-nam-35508">
+                            <a className="section-new-post-large-container">
                                 <img className="lazy" data-src={product1}
                                     src={product1}
                                     alt="Toyota Wigo hoàn toàn mới sắp ra mắt tại Việt Nam" />
@@ -54,8 +53,7 @@ function Home() {
                         </div>
 
                         <div className="section-new-post-small">
-                            <a className="section-new-post-small-container"
-                                href="/tin-tuc/san-pham/toyota-wigo-hoan-toan-moi-sap-ra-mat-tai-viet-nam-35508">
+                            <a className="section-new-post-small-container">
                                 <img src={postSmall1} data-src={postSmall1} className="lazy"
                                     alt="Toyota Việt Nam công bố doanh số bán hàng tháng 3/2023" />
                                 <div className="section-new-post-small-content">
@@ -68,8 +66,7 @@ function Home() {
 
                             </a>
 
-                            <a className="section-new-post-small-container"
-                                href="tin-tuc/san-pham/hilux-huyen-thoai-ban-tai-chinh-phuc-dinh-cao-cua-toyota-viet-nam-chinh-thuc-tro-lai-tu-thang-3-2023-35452">
+                            <a className="section-new-post-small-container">
                                 <img src={postSmall2} data-src={postSmall2} className="lazy"
                                     alt="Hilux – “Huyền thoại bán tải, chinh phục đỉnh cao”  của Toyota Việt Nam chính thức trở lại từ tháng 3/2023" />
                                 <div className="section-new-post-small-content">

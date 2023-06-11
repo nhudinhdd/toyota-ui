@@ -1,4 +1,10 @@
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    .image-car {
+        width: 100%;
+        transition: 0.2s all ease-in-out;
+        height: 105px;
+    }
+}
 
 @media screen and (max-width: 1023px) {
 
@@ -16,15 +22,24 @@
 
     .section-tab .nav {
         flex-wrap: nowrap;
-    }
-
-    .section-tab {
         padding: 4px;
         width: 100%;
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
     }
+
+    .image-car {
+        height: 100px;
+    }
+    .contact-form {
+        height: 400px;
+        overflow-y: auto;
+    }
+}
+ .image-car {
+    
+    margin: 0 auto;
 }
 
 .vehicles-content-list {
@@ -177,13 +192,6 @@
 
 .box-image {
     position: relative;
-}
-
-.image-car {
-    width: 100%;
-    height: 105px;
-    margin: 0 auto;
-    transition: 0.2s all ease-in-out;
 }
 
 .box-imgae:hover img {
