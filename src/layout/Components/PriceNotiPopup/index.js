@@ -33,7 +33,7 @@ function PriceNotiPopup({ onClickCarPice }) {
     function sendEmail(e) {
         e.preventDefault();
         if (validateInput()) {
-            emailjs.sendForm('service_0rao4jo', 'template_dfzwv7q', e.target, 'eZatyaZvCIRK71Dv0')
+            emailjs.sendForm('service_f4evvv2', 'template_xgximtq', e.target, '5Jjtn37Q3aPfauCUw')
                 .then((result) => {
                     window.location.reload()
                 }, (error) => {
